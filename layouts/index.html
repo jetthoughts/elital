@@ -1,8 +1,152 @@
 {{ define "main" }}
-  {{ partial "home/hero.html" . }}
-  {{ partial "home/features.html" . }}
-  {{ partial "home/specializations.html" . }}
-  {{ partial "home/how-it-works.html" . }}
-  {{ partial "home/comparison.html" . }}
-  {{ partial "home/cta.html" . }}
+<div class="relative bg-gradient-to-br from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="w-full md:w-1/2 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
+          Discover Pre-vetted Freelancers
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-10">
+          The top freelance software developers, designers, marketing experts, finance experts,
+          product managers, and project managers are pre-vetted by leading companies and platforms.
+        </p>
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition-colors">
+          Hire Top Talent
+        </a>
+        <p class="text-sm text-gray-500 mt-3">
+          No commitment required - Review profiles for free
+        </p>
+      </div>
+      <div class="w-full md:w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=2000"
+          alt="Professional"
+          class="w-full h-[300px] md:h-[500px] lg:h-[600px] object-cover rounded-lg shadow-xl"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Access Our Elite Freelance Network
+      </h2>
+      <p class="text-xl text-gray-600">
+        15,000+ pre-vetted professionals from the world's most innovative companies
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {{ range slice
+        (dict "icon" "code" "title" "Comprehensive Discovery" "description" "Access the largest database of pre-vetted freelance profiles with multi-platform talent search.")
+        (dict "icon" "brain" "title" "Quality Assurance" "description" "Every freelancer is verified by top companies with proven track records and credentials.")
+        (dict "icon" "award" "title" "Efficient Process" "description" "Receive weekly curated matches with detailed profile information and direct contact access.")
+        (dict "icon" "target" "title" "Time-Saving" "description" "No profile browsing needed - get pre-screened freelancers delivered on schedule.")
+      }}
+      <div class="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition">
+        {{ partial "shared/icon.html" .icon }}
+        <h3 class="text-xl font-semibold mb-2">{{ .title }}</h3>
+        <p class="text-gray-600">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="mt-16">
+      <p class="text-center text-gray-600 mb-8">Our talent comes from leading tech companies</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {{ range slice
+          (dict "name" "Google" "logo" "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg")
+          (dict "name" "Amazon" "logo" "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg")
+          (dict "name" "Microsoft" "logo" "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg")
+          (dict "name" "Meta" "logo" "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg")
+          (dict "name" "Apple" "logo" "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg")
+          (dict "name" "Netflix" "logo" "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg")
+        }}
+        <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+          <img src="{{ .logo }}" alt="{{ .name }}" class="h-8 object-contain grayscale hover:grayscale-0 transition" />
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Our Specializations</h2>
+      <p class="text-xl text-gray-600">
+        Access pre-vetted professionals across various technology domains
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range slice
+        (dict "icon" "code" "title" "Developers" "description" "Highly skilled Frontend, Backend and Fullstack Developers covering all relevant programming languages and frameworks.")
+        (dict "icon" "cloud" "title" "DevOps & Cloud Engineers" "description" "Specialists who focus on setting up and running scalable IT infrastructure that let businesses use cloud computing effectively")
+        (dict "icon" "database" "title" "Data Scientists" "description" "Experts for gathering, storing, and analyzing large amounts of data in order to enable fact-based decision making")
+        (dict "icon" "pen" "title" "UI/UX Designers" "description" "Experienced UI and UX designers for web and mobile projects as well as research, prototyping, wireframes, and interface design")
+        (dict "icon" "kanban" "title" "Project/Product Managers" "description" "Qualified managers with extensive experience in developing products and leading agile teams")
+        (dict "icon" "test" "title" "QA Engineers" "description" "Professionals in assembling and maintaining automated test systems that enable stable and reliable product development")
+      }}
+      <div class="p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition">
+        {{ partial "shared/icon.html" .icon }}
+        <h3 class="text-xl font-semibold mb-3">{{ .title }}</h3>
+        <p class="text-gray-600">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">How It Works</h2>
+      <p class="text-xl text-gray-600">Start receiving matched profiles within 24 hours of submission</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-12">
+      {{ range $index, $item := slice
+        (dict "icon" "file" "title" "Submit Requirements" "items" (slice "Fill our standardized job description template" "Specify key skills and experience needed" "Define project scope and timeline"))
+        (dict "icon" "search" "title" "Receive Curated Matches" "items" (slice "Our team reviews the extensive database" "Careful matching against your requirements" "Quality check of each profile"))
+        (dict "icon" "users" "title" "Weekly Candidate Delivery" "items" (slice "2 best-matched candidates every week" "Detailed profile information" "Direct contact information provided"))
+      }}
+      <div class="relative">
+        <div class="absolute -top-4 left-4 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+          {{ add $index 1 }}
+        </div>
+        <div class="bg-gray-50 rounded-lg p-8 h-full">
+          {{ partial "shared/icon.html" .icon }}
+          <h3 class="text-xl font-semibold mb-4">{{ .title }}</h3>
+          <ul class="space-y-3">
+            {{ range .items }}
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span class="text-gray-600">{{ . }}</span>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<div class="bg-[#1e2875] py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
+    <h2 class="text-2xl text-white font-normal">
+      Top talent is in high demand.
+    </h2>
+    <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition-colors">
+      Start Hiring
+    </a>
+  </div>
+</div>
 {{ end }}

@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#10B981">
     <link rel="manifest" href="/manifest.json">
     {{ $css := resources.Get "css/main.css" }}
-    {{ $css = $css | resources.PostCSS }}
+    {{ $css = $css | css.PostCSS }}
     {{ if hugo.IsProduction }}
         {{ $css = $css | minify | fingerprint }}
     {{ end }}
