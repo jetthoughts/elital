@@ -1,0 +1,36 @@
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">How It Works</h2>
+      <p class="text-xl text-gray-600">Start receiving matched profiles within 24 hours of submission</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-12">
+      {{ range $index, $item := slice
+        (dict "icon" "file" "title" "Submit Requirements" "items" (slice "Fill our standardized job description template" "Specify key skills and experience needed" "Define project scope and timeline"))
+        (dict "icon" "search" "title" "Receive Curated Matches" "items" (slice "Our team reviews the extensive database" "Careful matching against your requirements" "Quality check of each profile"))
+        (dict "icon" "users" "title" "Weekly Candidate Delivery" "items" (slice "2 best-matched candidates every week" "Detailed profile information" "Direct contact information provided"))
+      }}
+      <div class="relative">
+        <div class="absolute -top-4 left-4 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">
+          {{ add $index 1 }}
+        </div>
+        <div class="bg-gray-50 rounded-lg p-8 h-full">
+          {{ partial "shared/icon.html" .icon }}
+          <h3 class="text-xl font-semibold mb-4">{{ .title }}</h3>
+          <ul class="space-y-3">
+            {{ range .items }}
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span class="text-gray-600">{{ . }}</span>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

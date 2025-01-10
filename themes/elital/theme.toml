@@ -1,0 +1,12 @@
+name = "Elital"
+license = "MIT"
+licenselink = "https://github.com/yourusername/hugo-theme-elital/blob/master/LICENSE"
+description = "A modern Hugo theme for freelancer marketplace"
+homepage = "https://github.com/yourusername/hugo-theme-elital"
+tags = ["responsive", "modern", "minimal", "blog", "portfolio", "business"]
+features = ["blog", "responsive"]
+min_version = "0.41.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://yourdomain.com"

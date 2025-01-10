@@ -1,0 +1,27 @@
+<section class="py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Our Specializations</h2>
+      <p class="text-xl text-gray-600">
+        Access pre-vetted professionals across various technology domains
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range slice
+        (dict "icon" "code" "title" "Developers" "description" "Highly skilled Frontend, Backend and Fullstack Developers covering all relevant programming languages and frameworks.")
+        (dict "icon" "cloud" "title" "DevOps & Cloud Engineers" "description" "Specialists who focus on setting up and running scalable IT infrastructure that let businesses use cloud computing effectively")
+        (dict "icon" "database" "title" "Data Scientists" "description" "Experts for gathering, storing, and analyzing large amounts of data in order to enable fact-based decision making")
+        (dict "icon" "pen" "title" "UI/UX Designers" "description" "Experienced UI and UX designers for web and mobile projects as well as research, prototyping, wireframes, and interface design")
+        (dict "icon" "kanban" "title" "Project/Product Managers" "description" "Qualified managers with extensive experience in developing products and leading agile teams")
+        (dict "icon" "test" "title" "QA Engineers" "description" "Professionals in assembling and maintaining automated test systems that enable stable and reliable product development")
+      }}
+      <div class="p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition">
+        {{ partial "shared/icon.html" .icon }}
+        <h3 class="text-xl font-semibold mb-3">{{ .title }}</h3>
+        <p class="text-gray-600">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

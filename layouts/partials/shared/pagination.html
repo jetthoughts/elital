@@ -1,0 +1,26 @@
+{{ $paginator := .Paginator }}
+{{ if gt $paginator.TotalPages 1 }}
+<div class="flex items-center justify-center gap-2">
+  {{ if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}" class="p-2 rounded-lg hover:bg-gray-100">
+    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+  </a>
+  {{ end }}
+  
+  {{ range $paginator.Pagers }}
+  <a href="{{ .URL }}" class="w-10 h-10 rounded-lg flex items-center justify-center {{ if eq . $paginator.PageNumber }}bg-emerald-500 text-white{{ else }}hover:bg-gray-100{{ end }}">
+    {{ .PageNumber }}
+  </a>
+  {{ end }}
+  
+  {{ if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}" class="p-2 rounded-lg hover:bg-gray-100">
+    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"/>
+    </svg>
+  </a>
+  {{ end }}
+</div>
+{{ end }}

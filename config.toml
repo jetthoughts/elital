@@ -1,0 +1,56 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Elital: Find Top Pre-vetted Freelancers From Leading Platforms"
+
+[params]
+  description = "Discover freelancers already verified by top companies and platforms. Browse profiles of elite developers and managers. Direct access to top talent."
+
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 1
+  [[menu.main]]
+    name = "Enterprise"
+    url = "/enterprise/"
+    weight = 2
+  [[menu.main]]
+    name = "Pricing"
+    url = "/pricing/"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[build]
+  writeStats = true
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+
+[server]
+  [[server.headers]]
+    for = "/**"
+    [server.headers.values]
+      X-Content-Type-Options = "nosniff"
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"

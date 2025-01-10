@@ -1,0 +1,27 @@
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Access Our Elite Freelance Network
+      </h2>
+      <p class="text-xl text-gray-600">
+        15,000+ pre-vetted professionals from the world's most innovative companies
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {{ range slice
+        (dict "icon" "shield" "title" "Comprehensive Discovery" "description" "Access the largest database of pre-vetted freelance profiles with multi-platform talent search.")
+        (dict "icon" "brain" "title" "Quality Assurance" "description" "Every freelancer is verified by top companies with proven track records and credentials.")
+        (dict "icon" "award" "title" "Efficient Process" "description" "Receive weekly curated matches with detailed profile information and direct contact access.")
+        (dict "icon" "target" "title" "Time-Saving" "description" "No profile browsing needed - get pre-screened freelancers delivered on schedule.")
+      }}
+      <div class="p-6 rounded-xl bg-gray-50 hover:bg-gray-100 transition">
+        {{ partial "shared/icon.html" .icon }}
+        <h3 class="text-xl font-semibold mb-2">{{ .title }}</h3>
+        <p class="text-gray-600">{{ .description }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
