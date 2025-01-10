@@ -1,5 +1,4 @@
 import React from 'react';
-import { Check, X } from 'lucide-react';
 
 const ComparisonTable = () => {
   return (
@@ -12,7 +11,7 @@ const ComparisonTable = () => {
             <thead>
               <tr className="bg-white">
                 <th className="p-4 text-left">Features</th>
-                <th className="p-4 text-center bg-indigo-50 font-semibold text-indigo-600">
+                <th className="p-4 text-center bg-emerald-50 font-semibold text-emerald-600">
                   Elital
                 </th>
                 <th className="p-4 text-center">Toptal</th>
@@ -28,13 +27,6 @@ const ComparisonTable = () => {
                   toptal: 'Hiring platform',
                   arc: 'Hiring platform',
                   turing: 'Hiring platform',
-                },
-                {
-                  feature: 'Profile Sources',
-                  us: 'Multiple platforms',
-                  toptal: 'Single source',
-                  arc: 'Single source',
-                  turing: 'Single source',
                 },
                 {
                   feature: 'Database Size',
@@ -74,10 +66,10 @@ const ComparisonTable = () => {
               ].map((row, i) => (
                 <tr key={i} className="border-t">
                   <td className="p-4 font-medium">{row.feature}</td>
-                  <td className="p-4 text-center bg-indigo-50">{row.us}</td>
-                  <td className="p-4 text-center">{row.toptal}</td>
-                  <td className="p-4 text-center">{row.arc}</td>
-                  <td className="p-4 text-center">{row.turing}</td>
+                  <td className="p-4 text-center bg-emerald-50 text-emerald-700 font-medium">{row.us}</td>
+                  <td className="p-4 text-center text-gray-600">{row.toptal}</td>
+                  <td className="p-4 text-center text-gray-600">{row.arc}</td>
+                  <td className="p-4 text-center text-gray-600">{row.turing}</td>
                 </tr>
               ))}
             </tbody>

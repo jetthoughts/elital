@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Button from '../shared/Button';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -13,11 +14,11 @@ export default function Hero() {
               Discover Pre-vetted Freelancers
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-10">
-              The top freelance software developers, designers, marketing experts, finance experts, 
+              The top freelance software developers, designers, marketing experts, finance experts,
               product managers, and project managers are pre-vetted by leading companies and platforms.
             </p>
-            <Button 
-              href="/contact" 
+            <Button
+              href="/contact"
               className="text-lg px-10"
             >
               Hire Top Talent
@@ -27,11 +28,16 @@ export default function Hero() {
             </p>
           </div>
           <div className="w-full md:w-1/2">
-            <img
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=2000"
-              alt="Professional"
-              className="w-full h-[300px] md:h-[500px] lg:h-[600px] object-cover rounded-lg shadow-xl"
-            />
+            <div className="relative w-full aspect-[4/3] md:aspect-[3/4] lg:aspect-[4/5]">
+              <Image
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=2000"
+                alt="Professional"
+                fill
+                className="object-cover rounded-lg shadow-xl"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

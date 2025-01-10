@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.next
+.bolt
+dist
+resources
+node_modules

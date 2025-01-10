@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Typography */
+.prose {
+  @apply max-w-none;
+}
+
+.prose a {
+  @apply text-emerald-600 hover:text-emerald-700 no-underline;
+}
+
+.prose h2 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mt-6 mb-3;
+}
+
+.prose ul {
+  @apply list-disc list-inside;
+}
+
+.prose ol {
+  @apply list-decimal list-inside;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-2.5 font-medium rounded-lg transition-colors;
+}
+
+.btn-primary {
+  @apply bg-emerald-500 text-white hover:bg-emerald-600;
+}
+
+.btn-secondary {
+  @apply bg-white text-emerald-600 border-2 border-emerald-200 hover:border-emerald-300 hover:bg-emerald-50;
+}

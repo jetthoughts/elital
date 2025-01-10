@@ -14,8 +14,11 @@ export default function WorkflowStep({ icon: Icon, title, items, number }: Workf
   return (
     <div className="relative">
       <StepNumber number={number} />
-      <div className="bg-gray-50 rounded-lg p-8 h-full">
-        <Icon className="w-12 h-12 text-indigo-600 mb-6" />
+      <div className="bg-gradient-to-br from-emerald-50 to-white rounded-lg p-8 h-full">
+        <div className="relative">
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 to-emerald-600 blur-xl opacity-20 rounded-full" />
+          <Icon className="relative w-12 h-12 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl p-2.5 text-white mb-6 shadow-lg shadow-emerald-200" />
+        </div>
         <h3 className="text-xl font-semibold mb-4">{title}</h3>
         <StepList items={items} />
       </div>
