@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import SuccessStories from '@/components/pages/SuccessStories';
+import SuccessStories from '@/pages/SuccessStories';
 
 export const metadata: Metadata = {
   title: 'Success Stories - Elital',

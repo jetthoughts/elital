@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Pricing from '@/components/pages/Pricing';
+import Pricing from '@/pages/Pricing';
 
 export const metadata: Metadata = {
   title: 'Pricing - Elital',

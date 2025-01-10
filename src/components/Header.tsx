@@ -68,13 +68,13 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="flex items-center gap-4 md:gap-8">
-            <Link
-              href="/blog"
+            <Link 
+              href="/blog" 
               className="hidden md:block text-gray-600 hover:text-emerald-500 transition"
             >
               Blog
             </Link>
-            <Link
+            <Link 
               href="/blog"
               className="md:hidden text-gray-600 hover:text-emerald-500"
             >
@@ -83,7 +83,7 @@ export default function Header() {
             <div className="hidden md:block">
               <Button href="/contact">Contact Us</Button>
             </div>
-            <Link
+            <Link 
               href="/contact"
               className="md:hidden text-emerald-500 hover:text-emerald-600"
             >

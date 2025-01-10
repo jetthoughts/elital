@@ -14,7 +14,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
-
+  
   return {
     title: post.title,
     description: post.excerpt,
@@ -40,16 +40,16 @@ export default function BlogPost({ params }: Props) {
   return (
     <article className="pt-32 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/blog"
+        <Link 
+          href="/blog" 
           className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Blog
         </Link>
-
+        
         <div className="relative w-full aspect-[16/9] mb-8">
-          <Image
+          <Image 
             src={post.image}
             alt={post.title}
             fill
@@ -68,8 +68,8 @@ export default function BlogPost({ params }: Props) {
         </div>
 
         <h1 className="text-4xl font-bold text-gray-900 mb-8">{post.title}</h1>
-
-        <div
+        
+        <div 
           className="prose prose-emerald max-w-none"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />

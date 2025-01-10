@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Press from '@/components/pages/Press';
+import Press from '@/pages/Press';
 
 export const metadata: Metadata = {
   title: 'Press - Elital',

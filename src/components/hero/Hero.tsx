@@ -14,11 +14,11 @@ export default function Hero() {
               Discover Pre-vetted Freelancers
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-10">
-              The top freelance software developers, designers, marketing experts, finance experts,
+              The top freelance software developers, designers, marketing experts, finance experts, 
               product managers, and project managers are pre-vetted by leading companies and platforms.
             </p>
-            <Button
-              href="/contact"
+            <Button 
+              href="/contact" 
               className="text-lg px-10"
             >
               Hire Top Talent

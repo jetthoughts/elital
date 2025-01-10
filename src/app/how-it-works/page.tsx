@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import HowItWorks from '@/components/pages/HowItWorks';
+import HowItWorks from '@/pages/HowItWorks';
 
 export const metadata: Metadata = {
   title: 'How It Works - Elital',

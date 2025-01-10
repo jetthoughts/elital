@@ -7,8 +7,7 @@ const footerSections = [
     links: [
       { label: 'How it Works', path: '/how-it-works' },
       { label: 'Success Stories', path: '/success-stories' },
-      { label: 'Pricing', path: '/pricing' },
-      { label: 'Enterprise', path: '/enterprise' }
+      { label: 'Pricing', path: '/pricing' }
     ]
   },
   {
@@ -16,8 +15,7 @@ const footerSections = [
     links: [
       { label: 'About Us', path: '/about' },
       { label: 'Careers', path: '/careers' },
-      { label: 'Blog', path: '/blog' },
-      { label: 'Press', path: '/press' }
+      { label: 'Blog', path: '/blog' }
     ]
   },
   {
@@ -25,8 +23,7 @@ const footerSections = [
     links: [
       { label: 'Privacy Policy', path: '/legal/privacy' },
       { label: 'Terms of Service', path: '/legal/terms' },
-      { label: 'Cookie Policy', path: '/legal/cookies' },
-      { label: 'Security', path: '/legal/security' }
+      { label: 'Cookie Policy', path: '/legal/cookies' }
     ]
   }
 ];
@@ -55,7 +52,18 @@ export default function Footer() {
           ))}
         </div>
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p>&copy; {new Date().getFullYear()} Elital. All rights reserved.</p>
+          <p className="mb-2">&copy; {new Date().getFullYear()} Elital. All rights reserved.</p>
+          <p className="text-sm">
+            Provided by{' '}
+            <a 
+              href="https://www.jetthoughts.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-emerald-500 hover:text-emerald-400 transition"
+            >
+              JetThoughts
+            </a>
+          </p>
         </div>
       </div>
     </footer>

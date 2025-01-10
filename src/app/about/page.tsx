@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import About from '@/components/pages/About';
+import About from '@/pages/About';
 
 export const metadata: Metadata = {
   title: 'About Us - Elital',

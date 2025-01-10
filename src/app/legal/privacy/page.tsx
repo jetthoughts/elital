@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Privacy from '@/components/pages/legal/Privacy';
+import Privacy from '@/pages/legal/Privacy';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - Elital',

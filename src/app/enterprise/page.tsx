@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Enterprise from '@/components/pages/Enterprise';
+import Enterprise from '@/pages/Enterprise';
 
 export const metadata: Metadata = {
   title: 'Enterprise Solutions - Elital',

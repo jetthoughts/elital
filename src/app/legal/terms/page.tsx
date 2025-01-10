@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Terms from '@/components/pages/legal/Terms';
+import Terms from '@/pages/legal/Terms';
 
 export const metadata: Metadata = {
   title: 'Terms of Service - Elital',

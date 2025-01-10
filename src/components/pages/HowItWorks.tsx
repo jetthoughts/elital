@@ -18,7 +18,7 @@ export default function HowItWorks() {
           <h2 className="text-2xl font-bold mb-6">Why Choose Our Platform?</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              "Access to pre-vetted talent by top companies",
+              "Access to pre-vetted talent from top companies",
               "Risk-free trial period with all candidates",
               "Direct communication with talent",
               "No long-term contracts required",
