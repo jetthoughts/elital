@@ -21,7 +21,7 @@ enableGitInfo = true
     weight = 3
   [[menu.main]]
     name = "Contact"
-    url = "/contact-us/"
+    url = "/contact/"
     weight = 4
 
 [markup]
