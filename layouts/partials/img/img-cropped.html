@@ -12,5 +12,5 @@
 </picture>
 
 {{ else }}
-<img {{ print $attributes | safeHTMLAttr }} src="{{ (resources.Get "img/no-image.svg" | resources.Fingerprint).RelPermalink }}" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
+<img src="{{ (resources.Get "img/no-image.png" | resources.Fingerprint).RelPermalink }}" width="{{ .width }}" height="{{ .height }}" alt="Placeholder Image">
 {{ end }}
