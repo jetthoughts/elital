@@ -8,14 +8,14 @@
       Back to Blog
     </a>
 
-    {{ with .Params.image }}
-    <div class="relative w-full h-64 mb-8">
-      <img 
-        src="{{ . }}" 
-        alt="{{ $.Title }}" 
-        class="w-full h-full object-cover rounded-lg"
-        loading="eager"
-      >
+    {{ if .Params.image }}
+
+    <div class="relative w-full aspect-[16/9] mb-8">
+
+      {{ $image := .Page.Resources.Get .Params.image }}
+      {{ $title := .Title }}
+      {{ partial "img/hero-big.html" (dict "image" $image "title" $title) }}
+
     </div>
     {{ end }}
 
