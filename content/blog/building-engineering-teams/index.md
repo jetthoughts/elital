@@ -3,7 +3,7 @@ title: "How to Build High-Performing Engineering Teams"
 date: "2024-03-05"
 author: "Michael Roberts"
 excerpt: "Building and maintaining high-performing engineering teams requires more than just hiring talented developers. Learn the key strategies that successful tech companies use."
-image: image.jpg
+image: 
 ---
 
 Building high-performing engineering teams is both an art and a science. Here's how to create and nurture teams that consistently deliver exceptional results.
