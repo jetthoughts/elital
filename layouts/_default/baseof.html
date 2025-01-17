@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta name="theme-color" content="#10B981">
-    <link rel="manifest" href="/manifest.json">
+
+    <link rel="icon" type="image/png" href="{{ (resources.Get "img/favicon/favicon-96x96.png" | fingerprint).RelPermalink }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ (resources.Get "img/favicon/favicon.svg" | fingerprint).RelPermalink }}" />
+    <link rel="shortcut icon" href="{{ (resources.Get "/img/favicon/favicon.ico" | fingerprint).RelPermalink }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ (resources.Get "img/favicon/apple-touch-icon.png" | fingerprint).RelPermalink }}">
+    <link rel="manifest" href="{{ (resources.Get "img/favicon/site.webmanifest" | resources.ExecuteAsTemplate "site.webmanifest" . | fingerprint).RelPermalink }}">
+
     {{ $css := resources.Get "css/main.css" }}
     {{ $css = $css | css.PostCSS }}
     {{ if hugo.IsProduction }}
