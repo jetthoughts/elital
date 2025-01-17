@@ -1,6 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Elital: Find Top Pre-vetted Freelancers From Leading Platforms"
+enableGitInfo = true
 
 [params]
   description = "Discover freelancers already verified by top companies and platforms. Browse profiles of elite developers and managers. Direct access to top talent."
@@ -20,7 +21,7 @@ title = "Elital: Find Top Pre-vetted Freelancers From Leading Platforms"
     weight = 3
   [[menu.main]]
     name = "Contact"
-    url = "/contact/"
+    url = "/contact-us/"
     weight = 4
 
 [markup]
@@ -46,6 +47,15 @@ title = "Elital: Find Top Pre-vetted Freelancers From Leading Platforms"
 [security]
   [security.funcs]
     getenv = ['^HUGO_', '^CI$']
+[permalinks]
+  pages = "/:slug/"
+  blog = "/blog/:slug/"
+
+[permalinks.term]
+  tags = "/blog/tags/:slug/"
+
+[taxonomies]
+  tag = "tags"
 
 [server]
   [[server.headers]]
