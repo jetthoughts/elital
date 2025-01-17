@@ -1,3 +1,6 @@
+{{ define "header" }}
+{{ partial "json-ld.html" (dict "Site" .Site "Page" .) }}
+{{ end }}
 {{ define "main" }}
 <article class="pt-32 pb-16">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
