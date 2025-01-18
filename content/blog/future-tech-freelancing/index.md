@@ -1,9 +1,9 @@
 ---
 title: "The Future of Tech Freelancing: Trends to Watch"
-date: "2024-03-01"
-author: "Emma Thompson"
+date: 2024-03-01
+author: Emma Thompson
 excerpt: "As the freelance tech industry continues to evolve, new trends are emerging that will shape the future of work. Discover what's next in tech freelancing."
-image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80"
+image: image.jpg
 ---
 
 The tech freelancing landscape is rapidly evolving. Here are the key trends shaping its future.

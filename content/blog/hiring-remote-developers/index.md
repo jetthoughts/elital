@@ -1,9 +1,9 @@
 ---
-title: "5 Best Practices for Hiring Remote Developers in 2024"
-date: "2024-03-07"
-author: "Sarah Chen"
-excerpt: "The landscape of tech hiring has transformed dramatically in recent years, with remote work becoming the norm rather than the exception. Here are five essential practices for successfully hiring remote developers in 2024."
-image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80"
+title: 5 Best Practices for Hiring Remote Developers in 2024
+date: 2024-03-07
+author: Sarah Chen
+excerpt: The landscape of tech hiring has transformed dramatically in recent years, with remote work becoming the norm rather than the exception. Here are five essential practices for successfully hiring remote developers in 2024.
+image: image.jpg
 ---
 
 The landscape of tech hiring has transformed dramatically in recent years, with remote work becoming the norm rather than the exception. Here are five essential practices for successfully hiring remote developers in 2024.

@@ -10,7 +10,7 @@
           The top freelance software developers, designers, marketing experts, finance experts,
           product managers, and project managers are pre-vetted by leading companies and platforms.
         </p>
-        <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition-colors">
+        <a href="/contact/" class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition-colors">
           Hire Top Talent
         </a>
         <p class="text-sm text-gray-500 mt-3">
@@ -18,11 +18,9 @@
         </p>
       </div>
       <div class="w-full md:w-1/2">
-        <img
-          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=2000"
-          alt="Professional"
-          class="w-full h-[300px] md:h-[500px] lg:h-[600px] object-cover rounded-lg shadow-xl"
-        />
+        {{ $image :=  .Page.Resources.Get "home-image.jpg" }}
+        {{ $title := "Professional" }}
+        {{ partial "img/home-person.html" (dict "image" $image "title" $title ) }}
       </div>
     </div>
   </div>
@@ -144,7 +142,7 @@
     <h2 class="text-2xl text-white font-normal">
       Top talent is in high demand.
     </h2>
-    <a href="/contact" class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition-colors">
+    <a href="/contact/" class="inline-flex items-center justify-center px-8 py-3 text-lg font-medium text-white bg-emerald-500 rounded-lg hover:bg-emerald-600 transition-colors">
       Start Hiring
     </a>
   </div>

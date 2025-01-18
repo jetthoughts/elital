@@ -1,0 +1,32 @@
+{{ define "main" }}
+<main class="flex-grow">
+    <div class="bg-gradient-to-b from-gray-50 to-white pt-32 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><h1 class="text-4xl font-bold text-gray-900 mb-4">{{ .Title
+            }}</h1>
+            {{ with .Params.description }}
+            <p class="text-xl text-gray-600 max-w-3xl">{{ . }}</p></div>
+        {{ end }}
+    </div>
+
+
+    {{ if .Params.image }}
+
+    <div class="relative w-full aspect-[16/9] mb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {{ $image := .Page.Resources.Get .Params.image }}
+        {{ $title := .Title }}
+        {{ partial "img/hero-big.html" (dict "image" $image "title" $title) }}
+
+    </div>
+    {{ end }}
+
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="prose prose-emerald max-w-none">
+            {{ .Content }}
+        </div>
+    </div>
+
+
+</main>
+{{ end }}
