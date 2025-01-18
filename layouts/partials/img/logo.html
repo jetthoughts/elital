@@ -1,0 +1,7 @@
+{{ $svg := .svg }}
+{{ $svgPath := printf "img/logo/%s" $svg }}
+{{ $svgFile := resources.Get $svgPath | fingerprint }}
+{{ $svgRelPermalink := $svgFile.RelPermalink }}
+{{ $alt := .alt | default "" }}
+{{ $attributes := .attributes | default "" }}
+<img loading="lazy" src="{{ $svgRelPermalink }}" alt="{{ $alt }}" class="h-8 object-contain grayscale hover:grayscale-0 transition">

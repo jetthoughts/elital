@@ -55,16 +55,16 @@
     <div class="mt-16">
       <p class="text-center text-gray-600 mb-8">Our talent comes from leading tech companies</p>
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {{ range slice
-          (dict "name" "Google" "logo" "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg")
-          (dict "name" "Amazon" "logo" "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg")
-          (dict "name" "Microsoft" "logo" "https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg")
-          (dict "name" "Meta" "logo" "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg")
-          (dict "name" "Apple" "logo" "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg")
-          (dict "name" "Netflix" "logo" "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg")
-        }}
+        {{ range (slice
+          (dict "name" "Google" "logo" "Google_2015_logo.svg")
+          (dict "name" "Amazon" "logo" "Amazon_logo.svg")
+          (dict "name" "Microsoft" "logo" "Microsoft_logo_(2012).svg")
+          (dict "name" "Meta" "logo" "Meta_Platforms_Inc._logo.svg")
+          (dict "name" "Apple" "logo" "Apple_logo_black.svg")
+          (dict "name" "Netflix" "logo" "Netflix_2015_logo.svg")
+        )}}
         <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
-          <img src="{{ .logo }}" alt="{{ .name }}" class="h-8 object-contain grayscale hover:grayscale-0 transition" />
+          {{ partial "img/logo" (dict "svg" .logo "alt" .name) }}
         </div>
         {{ end }}
       </div>
