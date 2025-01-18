@@ -4,6 +4,7 @@ date: 2024-03-01
 author: Emma Thompson
 excerpt: "As the freelance tech industry continues to evolve, new trends are emerging that will shape the future of work. Discover what's next in tech freelancing."
 image: image.jpg
+tags: ["html", "freelance"]
 ---
 
 The tech freelancing landscape is rapidly evolving. Here are the key trends shaping its future.
