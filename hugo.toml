@@ -64,3 +64,9 @@ enableGitInfo = true
       X-Content-Type-Options = "nosniff"
       X-Frame-Options = "DENY"
       X-XSS-Protection = "1; mode=block"
+
+
+[params.forms.contact]
+action = "https://docs.google.com/forms/d/e/1FAIpQLSccFMkJCsmB5c2rVm7GkWmg0aHsKINxu2OqJrU3x9fI5z8-Zw/formResponse"
+email = "entry.1422180301"
+details = "entry.726883358"

@@ -3,37 +3,5 @@ title: Post Your Project
 date: 2024-03-01
 slug: contact
 description: Get matched with pre-vetted talent
+layout: contact
 ---
-
-The tech freelancing landscape is rapidly evolving. Here are the key trends shaping its future.
-
-## AI Integration in Freelance Work
-
-- AI-assisted coding tools
-- Automated project matching
-- Smart contract management
-- Performance prediction
-
-## Specialized Micro-Services
-
-The rise of specialized services:
-- API development
-- Cloud optimization
-- Security audits
-- Performance tuning
-
-## Remote-First Collaboration
-
-New tools and practices:
-- Virtual whiteboarding
-- Async communication platforms
-- Time zone management
-- Digital asset handling
-
-## Value-Based Pricing
-
-Moving beyond hourly rates:
-- Outcome-based pricing
-- Value-driven contracts
-- Risk-sharing models
-- Performance bonuses

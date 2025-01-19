@@ -1,0 +1,115 @@
+{{ define "main" }}
+<main class="flex-grow">
+    <main>
+        <div class="bg-gradient-to-b from-gray-50 to-white pt-32 pb-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><h1 class="text-4xl font-bold text-gray-900 mb-4">Post
+                Your Project</h1>
+                <p class="text-xl text-gray-600 max-w-3xl">Get matched with pre-vetted talent</p></div>
+        </div>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="space-y-8">
+                <form class="space-y-6" method="post" target="_blank" action="{{ .Site.Params.forms.contact.action }}">
+                    <div><label for="email" class="block text-sm font-medium text-gray-700 mb-1">Work
+                        Email</label><input id="email" required=""
+                                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 border"
+                                            placeholder="you@company.com" type="email" name="{{.Site.Params.forms.contact.email }}"></div>
+                    <div><label for="description" class="block text-sm font-medium text-gray-700 mb-1">Job
+                        Details</label><textarea id="description" name="{{.Site.Params.forms.contact.details }}" required rows="20"
+                                                 class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 border font-mono">Job Title: [Specific Role] Remote Contractor
+
+About Us
+[Brief company description, mission, and values]
+
+Team Structure and Size
+Our remote team consists of [number] members across [number] time zones. You'll be working directly with:
+  * [Role 1]
+  * [Role 2]
+  * [Role 3]
+Team size: [X] people
+
+Role Overview
+We're seeking a talented [role] to join our remote team. As a contractor, you'll be responsible for [key responsibilities].
+
+Key Responsibilities
+  * [Responsibility 1]
+  * [Responsibility 2]
+  * [Responsibility 3]
+
+Required Skills and Experience
+  * [Skill/Experience 1]
+  * [Skill/Experience 2]
+  * [Skill/Experience 3]
+
+Nice-to-Have Skills
+  * [Additional Skill 1]
+  * [Additional Skill 2]
+
+Compensation Range
+$[X] - $[Y] per [hour/month/project], depending on experience and skills.
+
+Contract Duration
+[Specify duration, e.g., 3 months, 6 months, or ongoing]
+
+Expected Work Schedule
+  * hours per week
+  * Core working hours: [specify time range and time zone]
+  * Flexibility: [describe any flexible arrangements]
+
+Tools and Equipment
+  * We provide: [list of tools/software provided]
+  * You'll need: [list of required equipment, e.g., reliable internet connection, personal computer]
+
+Communication and Collaboration
+  * Daily check-ins via [tool, e.g., Slack]
+  * Weekly team meetings via [tool, e.g., Zoom]
+  * Project management through [tool, e.g., Asana]
+
+Success Metrics
+Your performance will be evaluated based on:
+  * [Metric 1, e.g., Project completion rate]
+  * [Metric 2, e.g., Quality of deliverables]
+  * [Metric 3, e.g., Adherence to deadlines]
+
+Application Process
+  * Submit your resume and portfolio
+  * Complete a brief skills assessment
+  * Participate in a video interview</textarea></div>
+                    <button class="inline-flex items-center justify-center gap-2 font-medium transition-all rounded-lg px-6 py-2.5 text-base bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700 shadow-sm hover:shadow active:shadow-inner w-full"
+                            type="submit">Get Your AI-Selected Candidates
+                    </button>
+                </form>
+                <div class="border-t pt-6"><h4 class="text-sm font-medium text-gray-900 mb-4">What happens next?</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-clock w-5 h-5 text-indigo-600">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>Get 5 best-matching candidates within 24 hours</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-users w-5 h-5 text-indigo-600">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>All candidates pre-vetted by industry experts</span></div>
+                        <div class="flex items-center gap-3 text-sm text-gray-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="lucide lucide-circle-check-big w-5 h-5 text-indigo-600">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <path d="m9 11 3 3L22 4"></path>
+                            </svg>
+                            <span>Start risk-free trial with selected candidates</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</main>
+{{ end }}
