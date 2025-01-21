@@ -2,7 +2,7 @@ baseURL = "https://elital.com/"
 languageCode = "en-us"
 title = "Elital: Find Top Pre-vetted Freelancers From Leading Platforms"
 enableGitInfo = true
-summarylength = 30
+summarylength = 12
 
 [params]
   description = "Discover freelancers already verified by top companies and platforms. Browse profiles of elite developers and managers. Direct access to top talent."
