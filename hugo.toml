@@ -4,6 +4,11 @@ title = "Elital: Find Top Pre-vetted Freelancers From Leading Platforms"
 enableGitInfo = true
 summarylength = 12
 
+
+[services]
+  [services.googleAnalytics]
+    ID = 'G-WDX8QHEBBR'
+
 [params]
   description = "Discover freelancers already verified by top companies and platforms. Browse profiles of elite developers and managers. Direct access to top talent."
 

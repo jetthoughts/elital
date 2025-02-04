@@ -24,6 +24,8 @@
     {{ partial "img/cover-image-metatag.html" (.Page.Resources.Get .Page.Params.image) }}
     {{ end }}
     {{ block "header" . }} {{ end }}
+
+    {{ partial "google_analytics.html" }}
 </head>
 <body class="min-h-screen flex flex-col">
     {{ partial "header.html" . }}
