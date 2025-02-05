@@ -73,6 +73,7 @@ summarylength = 12
 
 
 [params.forms.contact]
-action = "https://docs.google.com/forms/d/e/1FAIpQLSccFMkJCsmB5c2rVm7GkWmg0aHsKINxu2OqJrU3x9fI5z8-Zw/formResponse"
-email = "entry.1422180301"
-details = "entry.726883358"
+action = "https://docs.google.com/forms/d/e/1FAIpQLSe1UYdlqE_ae0F63ED_l9GfPtnWxwKz_qUjvp_NokBZfpuKmg/formResponse"
+email = "entry.2119222524"
+name = "entry.2025230732"
+details = "entry.67707002"
