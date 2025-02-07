@@ -9,12 +9,24 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="space-y-8">
                 <form class="space-y-6" method="post" target="_blank" action="{{ .Site.Params.forms.contact.action }}">
-                    <div><label for="email" class="block text-sm font-medium text-gray-700 mb-1">Work
-                        Email</label><input id="email" required=""
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Work Email</label>
+                        <input id="email" required=""
                                             class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 border"
-                                            placeholder="you@company.com" type="email" name="{{.Site.Params.forms.contact.email }}"></div>
+                                            placeholder="you@company.com" type="email"
+                                            name="{{.Site.Params.forms.contact.email }}">
+                    </div>
+
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input id="name"
+                               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 border"
+                               placeholder="John Doe" type="text"
+                               name="{{.Site.Params.forms.contact.name }}">
+                    </div>
                     <div><label for="description" class="block text-sm font-medium text-gray-700 mb-1">Job
-                        Details</label><textarea id="description" name="{{.Site.Params.forms.contact.details }}" required rows="20"
+                        Details</label>
+                        <textarea id="description" name="{{.Site.Params.forms.contact.details }}" required rows="20"
                                                  class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 border font-mono">Job Title: [Specific Role] Remote Contractor
 
 About Us
