@@ -1,5 +1,6 @@
 ---
 title: Unlocking Opportunities The Rise of C# Jobs Remote in 2025
+slug: unlocking-opportunities-the-rise-of-c-jobs-remote-in-2025
 date: 2025-02-05T18:00:00+02:00
 author:
 tags:
