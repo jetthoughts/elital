@@ -10,7 +10,7 @@ summarylength = 12
     ID = 'G-WDX8QHEBBR'
 
 [params]
-  description = "Discover freelancers already verified by top companies and platforms. Browse profiles of elite developers and managers. Direct access to top talent."
+  description = "Discover for Free freelancers already verified by top companies and platforms. Browse profiles of elite developers and managers. Direct access to top talent."
 
 [menu]
   [[menu.main]]
