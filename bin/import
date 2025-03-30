@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Exit on error
+set -e
+
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 2 ]; then
+  echo "Usage: $0 <input_directory> <output_directory>"
+fi
+
+IMPORT_DIR="${1:-_import}"
+BLOG_DIR="${2:-content/blog}"
+
+# Make sure blog directory exists
+mkdir -p "$BLOG_DIR"
+
+# Get current date in YYYY-MM-DD format
+CURRENT_DATE=$(date +%Y-%m-%d)
+
+# Process each folder in the import directory
+for FOLDER in "$IMPORT_DIR"/*; do
+  if [ -d "$FOLDER" ]; then
+    # Get folder basename
+    FOLDER_NAME=$(basename "$FOLDER")
+
+    # Extract title (remove [XXX] prefix)
+    TITLE=$(echo "$FOLDER_NAME" | sed -E 's/^\[[0-9]+\] *//' | sed 's/"/\\"/g')
+
+    echo "Processing: $FOLDER_NAME"
+
+    # Copy folder to blog directory
+    cp -R "$FOLDER" "$BLOG_DIR/"
+
+    # Check if content.md exists in the folder
+    CONTENT_FILE="$BLOG_DIR/$FOLDER_NAME/content.md"
+    INDEX_FILE="$BLOG_DIR/$FOLDER_NAME/index.md"
+
+    if [ -f "$CONTENT_FILE" ]; then
+      # Create new frontmatter
+      FRONTMATTER=$(cat << EOF
+---
+title: "$TITLE"
+date: $CURRENT_DATE
+author:
+tags:
+image: thumbnail.jpeg
+---
+EOF
+)
+
+      # Extract content without any existing frontmatter
+      CONTENT=$(sed -n '/^---$/,/^---$/!p;//d' "$CONTENT_FILE")
+
+      # If no frontmatter found, use the entire file
+      if [ -z "$CONTENT" ]; then
+        CONTENT=$(cat "$CONTENT_FILE")
+      fi
+
+      # Combine new frontmatter with content
+      echo "$FRONTMATTER" > "$INDEX_FILE"
+      echo "" >> "$INDEX_FILE"
+      echo "$CONTENT" >> "$INDEX_FILE"
+
+      # Remove the original content.md file
+      rm "$CONTENT_FILE"
+
+      echo "Created: $INDEX_FILE"
+    else
+      echo "Warning: content.md not found in $FOLDER"
+    fi
+  fi
+done
+
+echo "Import completed!"

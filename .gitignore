@@ -29,7 +29,7 @@ dist
 resources
 node_modules
 
-
+_import
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/hugo
