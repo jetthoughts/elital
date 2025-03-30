@@ -39,7 +39,7 @@ jobs:
           unzip upload.zip -d "_import/${{ steps.parse.outputs.issue }}"
           rm upload.zip
           
-          bin/import _import content/blog
+          bin/import "_import/${{ steps.parse.outputs.issue }}" "content/blog"
 
       - name: Create branch and commit files
         if: steps.parse.outputs.url != ''
