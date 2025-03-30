@@ -61,7 +61,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          pr_url=$(gh pr create --base master \
+          pr_url=$(gh pr create --base ${{ github.event.repository.default_branch }} \
             --title "Add files from issue #${{ steps.parse.outputs.issue }}" \
             --body "This PR adds files uploaded in issue #${{ steps.parse.outputs.issue }}. \
             Automatically created by the Process Issue Attachments workflow.")
